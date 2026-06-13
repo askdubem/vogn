@@ -1,6 +1,15 @@
-// Admin layout — wraps all admin pages
-// Will include: Sidebar + Header + children
-const AdminLayout = ({ children }) => {
-  return <div className="admin-layout">{children}</div>;
+import { Outlet } from 'react-router-dom';
+
+// Admin layout built in Phase 25
+// Will wrap: Sidebar + Header + <Outlet />
+const AdminLayout = () => {
+  return (
+    <div className="admin-layout">
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
 };
+
 export default AdminLayout;
