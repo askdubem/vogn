@@ -1,0 +1,100 @@
+/* ─────────────────────────────────────────
+   VŌGN — Spacing & Layout
+───────────────────────────────────────── */
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container-sm  { max-width: var(--container-sm);  }
+.container-md  { max-width: var(--container-md);  }
+.container-lg  { max-width: var(--container-lg);  }
+.container-xl  { max-width: var(--container-xl);  }
+.container-2xl { max-width: var(--container-2xl); }
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+/* ── Section Padding ── */
+.section        { padding: var(--space-20) 0; }
+.section-sm     { padding: var(--space-12) 0; }
+.section-lg     { padding: var(--space-32) 0; }
+
+@media (max-width: 768px) {
+  .section    { padding: var(--space-12) 0; }
+  .section-sm { padding: var(--space-8)  0; }
+  .section-lg { padding: var(--space-16) 0; }
+}
+
+/* ── Flex Utilities ── */
+.flex         { display: flex; }
+.flex-col     { flex-direction: column; }
+.flex-wrap    { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.items-end    { align-items: flex-end; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-end     { justify-content: flex-end; }
+.gap-2  { gap: var(--space-2);  }
+.gap-4  { gap: var(--space-4);  }
+.gap-6  { gap: var(--space-6);  }
+.gap-8  { gap: var(--space-8);  }
+.gap-12 { gap: var(--space-12); }
+
+/* ── Grid Utilities ── */
+.grid        { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid-cols-4 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .grid-cols-3,
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Margin & Padding Utilities ── */
+.m-auto { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mt-4  { margin-top: var(--space-4);  }
+.mt-6  { margin-top: var(--space-6);  }
+.mt-8  { margin-top: var(--space-8);  }
+.mt-12 { margin-top: var(--space-12); }
+.mb-4  { margin-bottom: var(--space-4);  }
+.mb-6  { margin-bottom: var(--space-6);  }
+.mb-8  { margin-bottom: var(--space-8);  }
+.mb-12 { margin-bottom: var(--space-12); }
+
+/* ── Display ── */
+.hidden        { display: none; }
+.block         { display: block; }
+.inline-block  { display: inline-block; }
+.w-full        { width: 100%; }
+.h-full        { height: 100%; }
+
+/* ── Breakpoints reference (JS use) ──
+  xs:  480px
+  sm:  640px
+  md:  768px
+  lg: 1024px
+  xl: 1280px
+  2xl:1440px
+─────────────────────────────────────── */

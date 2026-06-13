@@ -1,0 +1,87 @@
+/* ─────────────────────────────────────────
+   VŌGN — CSS Variables
+   Single source of truth for all tokens
+───────────────────────────────────────── */
+
+:root {
+
+  /* ── Brand Colors ── */
+  --powder-petal:   #F7E1D7;
+  --dust-grey:      #DEDBD2;
+  --ash-grey:       #B0C4B1;
+  --iron-grey:      #4A5759;
+
+  /* ── Semantic Colors ── */
+  --color-bg:           var(--powder-petal);
+  --color-bg-secondary: var(--dust-grey);
+  --color-bg-dark:      var(--iron-grey);
+  --color-accent:       var(--ash-grey);
+  --color-text:         var(--iron-grey);
+  --color-text-light:   #6B7B7C;
+  --color-text-muted:   #9AABAD;
+  --color-text-inverse: var(--powder-petal);
+  --color-border:       rgba(74, 87, 89, 0.15);
+  --color-border-dark:  rgba(74, 87, 89, 0.35);
+
+  /* ── Status Colors ── */
+  --color-success:  #2D7A4F;
+  --color-error:    #B84040;
+  --color-warning:  #B87020;
+  --color-info:     #2A6090;
+
+  /* ── Spacing Scale (8pt grid) ── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32: 128px;
+
+  /* ── Container Widths ── */
+  --container-sm:   640px;
+  --container-md:   768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+
+  /* ── Border Radius ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 1px 3px rgba(74, 87, 89, 0.08);
+  --shadow-md:  0 4px 12px rgba(74, 87, 89, 0.12);
+  --shadow-lg:  0 8px 24px rgba(74, 87, 89, 0.16);
+  --shadow-xl:  0 16px 48px rgba(74, 87, 89, 0.20);
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-slower: 600ms ease;
+
+  /* ── Z-Index Scale ── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+
+  /* ── Navbar Height ── */
+  --navbar-height:        72px;
+  --navbar-height-mobile: 60px;
+}
