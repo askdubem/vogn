@@ -1,18 +1,16 @@
 {
-    "name": "vogn",
-    "version": "1.0.0",
-    "description": "VŌGN Fashion Store — Monorepo root",
-    "private": true,
-    "scripts": {
-        "dev:frontend": "cd frontend && npm run dev",
-        "dev:backend": "cd backend && npm run dev",
-        "install:all": "cd frontend && npm install && cd ../backend && npm install",
-        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
-    },
-    "devDependencies": {
-        "concurrently": "^8.2.2"
-    },
-    "dependencies": {
-        "git": "^0.1.5"
-    }
+  "name": "vogn",
+  "version": "1.0.0",
+  "description": "VŌGN Fashion Store — Monorepo root",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "commit:phase1": "git add -A && git commit -m \"Phase 1: Project initialization — frontend (Vite/React) and backend (Express/MongoDB) scaffolded\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
