@@ -1,0 +1,14 @@
+.section { padding: var(--space-20) 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-12);
+}
+
+.cta { text-align: center; }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); } }
+@media (max-width: 400px)  { .grid { grid-template-columns: 1fr; } }

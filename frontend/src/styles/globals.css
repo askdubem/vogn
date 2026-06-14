@@ -248,21 +248,3 @@ main {
   cursor: not-allowed;
   pointer-events: none;
 }
-
-/* ── Layout Shell ── */
-.main-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-layout > main {
-  flex: 1;
-  padding-top: var(--navbar-height);
-}
-
-@media (max-width: 768px) {
-  .main-layout > main {
-    padding-top: var(--navbar-height-mobile);
-  }
-}

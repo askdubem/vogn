@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  gap: var(--space-4);
+}
+.code { font-family: var(--font-serif); font-size: var(--text-8xl); font-weight: 700; letter-spacing: -0.04em; color: var(--dust-grey); line-height: 1; margin: 0; }
+.msg  { font-family: var(--font-serif); font-size: var(--text-3xl); color: var(--iron-grey); }
+.sub  { color: var(--color-text-muted); max-width: 340px; }
+.actions { display: flex; gap: var(--space-3); margin-top: var(--space-4); flex-wrap: wrap; justify-content: center; }

@@ -1,0 +1,115 @@
+.section { padding: var(--space-20) 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: var(--space-4);
+}
+
+/* First card spans 2 rows on the left */
+.cardLarge {
+  grid-row: span 2;
+}
+
+.card {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  text-decoration: none;
+  aspect-ratio: 1 / 1;
+  background: var(--dust-grey);
+}
+
+.cardLarge {
+  aspect-ratio: unset;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slower);
+}
+
+.card:hover .image { transform: scale(1.07); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(74, 87, 89, 0.75) 0%,
+    rgba(74, 87, 89, 0.1) 50%,
+    transparent 100%
+  );
+  transition: background var(--transition-base);
+}
+
+.card:hover .overlay {
+  background: linear-gradient(
+    to top,
+    rgba(74, 87, 89, 0.85) 0%,
+    rgba(74, 87, 89, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-5) var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.label {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--powder-petal);
+  letter-spacing: var(--tracking-tight);
+}
+
+.cardLarge .label { font-size: var(--text-3xl); }
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(247, 225, 215, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--powder-petal);
+  transition: background var(--transition-base), transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.card:hover .arrow {
+  background: var(--powder-petal);
+  color: var(--iron-grey);
+  transform: translateX(3px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cardLarge { grid-row: span 1; aspect-ratio: 1 / 1; }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  .label { font-size: var(--text-base); }
+  .cardLarge .label { font-size: var(--text-lg); }
+}

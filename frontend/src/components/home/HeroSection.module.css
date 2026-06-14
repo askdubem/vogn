@@ -1,0 +1,192 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--navbar-height));
+}
+
+/* ── Background Slides ── */
+.bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  transform: scale(1.04);
+}
+
+.bgActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.8s ease, transform 6s ease;
+}
+
+/* ── Overlay ── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(74, 87, 89, 0.72) 0%,
+    rgba(74, 87, 89, 0.3) 60%,
+    rgba(74, 87, 89, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Content ── */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  width: 100%;
+  padding-top: var(--navbar-height);
+}
+
+.contentAnim { opacity: 0.6; }
+
+.badge {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--ash-grey);
+  border: 1px solid var(--ash-grey);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: var(--weight-bold);
+  color: var(--powder-petal);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-5);
+  max-width: 700px;
+  animation: fadeInUp 0.7s 0.1s ease both;
+}
+
+.headingLine {
+  display: block;
+}
+
+.sub {
+  font-size: var(--text-lg);
+  color: var(--dust-grey);
+  margin-bottom: var(--space-8);
+  max-width: 400px;
+  line-height: var(--leading-relaxed);
+  animation: fadeInUp 0.7s 0.2s ease both;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  animation: fadeInUp 0.7s 0.3s ease both;
+}
+
+.ctaBtn {
+  background: var(--powder-petal) !important;
+  color: var(--iron-grey) !important;
+  border-color: var(--powder-petal) !important;
+}
+
+.ctaBtn:hover {
+  background: var(--dust-grey) !important;
+  border-color: var(--dust-grey) !important;
+}
+
+.secondaryBtn {
+  border-color: var(--powder-petal) !important;
+  color: var(--powder-petal) !important;
+}
+
+.secondaryBtn:hover {
+  background: var(--powder-petal) !important;
+  color: var(--iron-grey) !important;
+}
+
+/* ── Dots ── */
+.dots {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 3;
+}
+
+.dot {
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(247, 225, 215, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-base), width var(--transition-base);
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--powder-petal);
+  width: 48px;
+}
+
+/* ── Scroll Indicator ── */
+.scrollIndicator {
+  position: absolute;
+  right: var(--space-8);
+  bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 3;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--ash-grey));
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scrollText {
+  font-size: 10px;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--ash-grey);
+  writing-mode: vertical-rl;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    margin-top: calc(-1 * var(--navbar-height-mobile));
+  }
+  .content { padding-top: var(--navbar-height-mobile); }
+  .heading { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .sub { font-size: var(--text-base); }
+  .scrollIndicator { display: none; }
+  .actions { gap: var(--space-3); }
+}

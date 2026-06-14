@@ -1,13 +1,23 @@
 import { Helmet } from 'react-helmet-async';
+import HeroSection       from '../components/home/HeroSection';
+import CategorySection   from '../components/home/CategorySection';
+import FeaturedSection   from '../components/home/FeaturedSection';
+import BestSellersSection from '../components/home/BestSellersSection';
+import NewsletterSection  from '../components/home/NewsletterSection';
 
 const HomePage = () => {
   return (
     <>
-      <Helmet><title>Home — VŌGN</title></Helmet>
-      <div className="container section">
-        <h2 style={{ fontFamily: 'var(--font-serif)', marginBottom: 'var(--space-3)' }}>Home</h2>
-        <p className="text-muted text-sm">Route active — full page built in its phase.</p>
-      </div>
+      <Helmet>
+        <title>VŌGN — Lagos Fashion</title>
+        <meta name="description" content="Premium fashion for the modern Nigerian. Shop Caps, T-Shirts, Hoodies, Bags, Accessories and Jackets." />
+      </Helmet>
+
+      <HeroSection />
+      <CategorySection />
+      <FeaturedSection />
+      <BestSellersSection />
+      <NewsletterSection />
     </>
   );
 };
