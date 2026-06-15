@@ -1,3 +1,1 @@
-// Hook: useCart
-const useCart = () => {};
-export default useCart;
+export { useCart } from '../context/CartContext';

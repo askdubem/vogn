@@ -1,0 +1,126 @@
+.page { padding: var(--space-12) 0 var(--space-20); }
+
+.header {
+  max-width: 640px;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-10);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--ash-grey);
+  margin-bottom: var(--space-3);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-3);
+}
+
+.meta {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.body {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--iron-grey);
+}
+
+.section p {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-3);
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+.section a {
+  color: var(--iron-grey);
+  text-decoration: underline;
+  font-weight: var(--weight-medium);
+}
+
+.section a:hover { opacity: 0.7; }
+
+.list {
+  list-style: disc;
+  padding-left: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-text-light);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  margin: var(--space-3) 0;
+}
+
+.list a {
+  color: var(--iron-grey);
+  text-decoration: underline;
+  font-weight: var(--weight-medium);
+}
+
+/* Shipping info cards */
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.infoCard {
+  background: var(--dust-grey);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.infoCard h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.infoCard p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.price {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  color: var(--iron-grey) !important;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: var(--text-4xl); }
+  .infoCards { grid-template-columns: 1fr; }
+}

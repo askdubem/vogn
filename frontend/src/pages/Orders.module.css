@@ -1,0 +1,27 @@
+.page { padding: var(--space-10) 0 var(--space-20); }
+.title { font-family: var(--font-serif); font-size: var(--text-4xl); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-tight); margin-bottom: var(--space-8); }
+.loading { padding: var(--space-10) var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); max-width: 800px; margin: 0 auto; }
+.skeleton { height: 160px; border-radius: var(--radius-xl); }
+.error { padding: var(--space-4); background: rgba(184,64,64,0.08); border: 1px solid var(--color-error); border-radius: var(--radius-md); color: var(--color-error); margin-bottom: var(--space-6); }
+.empty { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); padding: var(--space-20) 0; text-align: center; }
+.empty h2 { font-family: var(--font-serif); font-size: var(--text-2xl); }
+.empty p { color: var(--color-text-muted); }
+.list { display: flex; flex-direction: column; gap: var(--space-5); }
+.orderCard { background: var(--dust-grey); border-radius: var(--radius-xl); padding: var(--space-6); }
+.orderHeader { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: var(--space-5); gap: var(--space-4); }
+.orderNumber { font-weight: var(--weight-semibold); font-size: var(--text-base); margin-bottom: var(--space-1); }
+.orderDate { font-size: var(--text-sm); color: var(--color-text-muted); }
+.statusBadge { font-size: var(--text-xs); font-weight: var(--weight-semibold); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); white-space: nowrap; }
+.orderItems { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-5); }
+.orderItem { display: flex; align-items: center; gap: var(--space-3); }
+.itemImg { width: 52px; aspect-ratio: 3/4; border-radius: var(--radius-md); overflow: hidden; background: var(--powder-petal); flex-shrink: 0; }
+.itemImg img { width: 100%; height: 100%; object-fit: cover; }
+.itemInfo { flex: 1; }
+.itemName { font-size: var(--text-sm); font-weight: var(--weight-medium); }
+.itemMeta { font-size: var(--text-xs); color: var(--color-text-muted); }
+.itemPrice { font-family: var(--font-serif); font-size: var(--text-sm); font-weight: var(--weight-semibold); white-space: nowrap; }
+.moreItems { font-size: var(--text-xs); color: var(--color-text-muted); }
+.orderFooter { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.totalLabel { font-size: var(--text-sm); color: var(--color-text-light); }
+.payBadge { font-size: var(--text-xs); font-weight: 600; padding: 2px 10px; border-radius: var(--radius-full); background: rgba(184,64,64,0.1); color: var(--color-error); }
+.payBadgePaid { background: rgba(45,122,79,0.1); color: var(--color-success); }

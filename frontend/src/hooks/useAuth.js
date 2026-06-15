@@ -1,3 +1,1 @@
-// Hook: useAuth
-const useAuth = () => {};
-export default useAuth;
+export { useAuth } from '../context/AuthContext';
