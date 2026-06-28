@@ -9,6 +9,8 @@ import { CartProvider } from './context/CartContext';
 import App from './App.jsx';
 import './styles/globals.css';
 
+import {SpeedInsights} from "@vercel/speed-insights/next"
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -16,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <AuthProvider>
           <CartProvider>
             <App />
+            <SpeedInsights/>
             <Toaster
               position="top-right"
               toastOptions={{
